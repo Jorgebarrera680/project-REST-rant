@@ -1,16 +1,29 @@
 const React = require('react')
-const Def = require('./default')
+const Def = require('./Default')
 
-function index () {
+
+function index (data) {
+  let placesFormatted = data.places.map((place) => {
     return (
-      <Def>
-          <main>
-              <h1> hello ;/</h1>
-              <p>Oops, sorry, we can't find this page!</p>
-          </main>
-      </Def>
+      <div>
+        <h2>{place.name}</h2>
+        <img src={place.pic} alt={place.name}/>
+      </div>
     )
-  }
+  })
+  return (
+    <Def>
+        <main>
+            <h1>PLACES INDEX PAGE</h1>
+            {placesFormatted}
+        </main>
+    </Def>
+)
+}
+
+
+
+
   
 
-module.exports = error404
+module.exports = home
