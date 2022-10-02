@@ -1,5 +1,5 @@
 const React = require('react')
-const Def = require('./Default')
+const Def = require('../default')
 
 
 function index (data) {
@@ -26,4 +26,4 @@ function index (data) {
 
   
 
-module.exports = home
+module.exports = index
