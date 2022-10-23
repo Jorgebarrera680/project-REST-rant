@@ -1,5 +1,20 @@
 const React = require('react')
 const Def = require('../default')
+if (data.place.comments.length) {
+  let sumRatings = data.place.comments.reduce((tot, c) => {
+    return tot + c.stars
+  }, 0)
+  let averageRating = Math.round(sumRatings / data.place.comments.length)
+  let stars = ''
+  for (let i = 0; i < averageRating; i++) {
+    stars += 'â­ï¸'
+  }
+  rating = (
+    <h3>
+      {stars} stars
+    </h3>
+  )
+  }
 
 function new_form (data) {
     return (
